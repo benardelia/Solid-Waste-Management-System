@@ -12,14 +12,14 @@ class UserAdmin(BaseUserAdmin):
             None,
             {
                 "classes": ("wide",),
-                "fields": ("username", "password1", "password2", "email", "phone", "image", "user_type", "first_name", "last_name"),
+                "fields": ("username", "password1", "password2", "email", "phone", "image", "user_type", "first_name", "last_name", "firebase_uid", "assigned_area"),
             },
         ),
     )
 
     fieldsets = (
         (None, {"fields": ("username", "password")}),
-        (_("Personal info"), {"fields": ("first_name", "last_name", "email", "phone", "image", "user_type")}),
+        (_("Personal info"), {"fields": ("first_name", "last_name", "email", "phone", "image", "user_type", "firebase_uid", "assigned_area")}),
         (
             _("Permissions"),
             {
