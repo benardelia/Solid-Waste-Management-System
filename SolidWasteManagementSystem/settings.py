@@ -140,3 +140,6 @@ CORS_ALLOW_ALL_ORIGINS = True # For development
 GRAPHENE = {
     "SCHEMA": "SolidWasteManagementSystem.schema.schema"
 }
+
+# Firebase Configuration
+FIREBASE_CREDENTIALS = env('FIREBASE_CREDENTIALS')

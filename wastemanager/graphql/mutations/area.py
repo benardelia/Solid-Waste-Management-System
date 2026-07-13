@@ -13,22 +13,27 @@ class CreateHousehold(graphene.Mutation):
         latitude = graphene.Float(required=True)
         longitude = graphene.Float(required=True)
         waste_bin_present = graphene.String(required=True)
+        uid = graphene.String(required=False)
 
     household = graphene.Field(HouseholdType)
     success = graphene.Boolean()
 
     @authenticate_mutation
-    def mutate(self, info, area_id, owner_name, district, ward, village, latitude, longitude, waste_bin_present):
-        household = Household.objects.create(
-            area_id=area_id,
-            owner_name=owner_name,
-            district=district,
-            ward=ward,
-            village=village,
-            latitude=latitude,
-            longitude=longitude,
-            waste_bin_present=waste_bin_present
-        )
+    def mutate(self, info, area_id, owner_name, district, ward, village, latitude, longitude, waste_bin_present, uid=None):
+        kwargs = {
+            'area_id': area_id,
+            'owner_name': owner_name,
+            'district': district,
+            'ward': ward,
+            'village': village,
+            'latitude': latitude,
+            'longitude': longitude,
+            'waste_bin_present': waste_bin_present
+        }
+        if uid:
+            kwargs['uid'] = uid
+            
+        household = Household.objects.create(**kwargs)
         return CreateHousehold(household=household, success=True)
 
 class UpdateCollectionStatus(graphene.Mutation):

@@ -1,3 +1,4 @@
+import uuid
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from core.middleware import get_current_user
@@ -9,6 +10,7 @@ class AuditableModel(models.Model):
     Abstract base class that provides auditing fields for creation and modification.
     Automatically populated via CurrentUserMiddleware.
     """
+    uid = models.UUIDField(default=uuid.uuid4, unique=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     created_by = models.ForeignKey(
@@ -38,6 +40,7 @@ class AuditableModel(models.Model):
         super().save(*args, **kwargs)
 
 class User(AbstractUser):
+    firebase_uid = models.CharField(max_length=128, unique=True, blank=True, null=True)
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=15, blank=True, null=True)
     image = models.ImageField(upload_to='core/images/profiles', blank=True)

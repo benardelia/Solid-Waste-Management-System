@@ -3,23 +3,25 @@ from typing import Any, Callable, TypeVar
 from django.contrib.auth.models import AnonymousUser
 from graphene_django.views import GraphQLView
 from graphql import GraphQLError
-from rest_framework_simplejwt.authentication import JWTAuthentication
 from django.http import HttpRequest
+from core.firebase_auth import verify_firebase_token
 
 F = TypeVar('F', bound=Callable[..., Any])
 
 class JWTGraphQLView(GraphQLView):
     def parse_body(self, request: HttpRequest) -> dict[str, Any]:
-        auth = JWTAuthentication()
-        try:
-            user_auth_tuple = auth.authenticate(request)
-            if user_auth_tuple is not None:
-                request.user, _ = user_auth_tuple
-            elif not (hasattr(request, 'user') and request.user.is_authenticated):
+        auth_header = request.headers.get('Authorization', '')
+        if auth_header.startswith('Bearer '):
+            token = auth_header.split(' ')[1]
+            user = verify_firebase_token(token)
+            if user:
+                request.user = user
+            else:
                 request.user = AnonymousUser()
-        except Exception:
+        else:
             if not (hasattr(request, 'user') and request.user.is_authenticated):
                 request.user = AnonymousUser()
+                
         return super().parse_body(request)
 
 def authenticate_graphql_api(func: F) -> F:
