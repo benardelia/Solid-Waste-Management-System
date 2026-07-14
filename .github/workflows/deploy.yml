@@ -16,7 +16,7 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           script: |
             # 1. Navigate to the project directory on your server
-            cd /var/www/wastemanagement
+            cd /var/www/Solid-Waste-Management-System
             
             # 2. Pull the latest code from the main branch
             git pull origin main
