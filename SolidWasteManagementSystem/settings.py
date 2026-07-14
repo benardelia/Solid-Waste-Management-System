@@ -137,6 +137,14 @@ SIMPLE_JWT = {
 # CORS
 CORS_ALLOW_ALL_ORIGINS = True # For development
 
+# CSRF Trusted Origins (Required for Admin login behind Nginx HTTPS proxy)
+CSRF_TRUSTED_ORIGINS = [
+    f"https://{env('DOMAIN_NAME', default='solidwastemanagement.duckdns.org')}",
+]
+
+# Tell Django it's secure behind the proxy
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
 # Graphene Setup
 GRAPHENE = {
     "SCHEMA": "SolidWasteManagementSystem.schema.schema"
