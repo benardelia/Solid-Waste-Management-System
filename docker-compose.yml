@@ -14,49 +14,14 @@ services:
     build: .
     volumes:
       - .:/app
-    expose:
-      - "8003"
-    environment:
-      - VIRTUAL_HOST=solidwastemanagement.duckdns.org
-      - LETSENCRYPT_HOST=solidwastemanagement.duckdns.org
-      - VIRTUAL_PORT=8003
+    ports:
+      - "8003:8003"
     env_file: .env
     depends_on:
       - db
     command: >
-      sh -c "python manage.py collectstatic --noinput &&
-             python manage.py migrate &&
-             gunicorn SolidWasteManagementSystem.wsgi:application --bind 0.0.0.0:8003"
-
-  nginx-proxy:
-    image: nginxproxy/nginx-proxy:alpine
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - conf:/etc/nginx/conf.d
-      - vhost:/etc/nginx/vhost.d
-      - html:/usr/share/nginx/html
-      - certs:/etc/nginx/certs:ro
-      - /var/run/docker.sock:/tmp/docker.sock:ro
-    restart: always
-
-  acme-companion:
-    image: nginxproxy/acme-companion
-    environment:
-      - DEFAULT_EMAIL=admin@solidwastemanagement.duckdns.org
-    volumes_from:
-      - nginx-proxy
-    volumes:
-      - certs:/etc/nginx/certs:rw
-      - acme:/etc/acme.sh
-      - /var/run/docker.sock:/var/run/docker.sock:ro
-    restart: always
+      sh -c "python manage.py migrate &&
+             python manage.py runserver 0.0.0.0:8003"
 
 volumes:
   postgres_data:
-  conf:
-  vhost:
-  html:
-  certs:
-  acme:

@@ -1,0 +1,22 @@
+services:
+  web:
+    # Overrides for production
+    ports: !reset [] # Removes the mapped ports so we don't bypass nginx
+    expose:
+      - "8003"
+    environment:
+      - VIRTUAL_HOST=${DOMAIN_NAME}
+      - LETSENCRYPT_HOST=${DOMAIN_NAME}
+      - VIRTUAL_PORT=8003
+    networks:
+      - default
+      - proxy-network
+    command: >
+      sh -c "python manage.py collectstatic --noinput &&
+             python manage.py migrate &&
+             gunicorn SolidWasteManagementSystem.wsgi:application --bind 0.0.0.0:8003"
+
+networks:
+  proxy-network:
+    external: true
+    name: global-proxy-network

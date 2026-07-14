@@ -21,8 +21,8 @@ jobs:
             # 2. Pull the latest code from the main branch
             git pull origin main
             
-            # 3. Build and restart the Docker containers in detached mode
-            docker compose up -d --build
+            # 3. Build and restart the Docker containers using the production override
+            docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
             
             # 4. Automatically run any new database migrations
             docker compose exec -T web python manage.py migrate
