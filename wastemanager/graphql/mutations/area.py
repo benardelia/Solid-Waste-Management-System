@@ -54,12 +54,13 @@ class UpdateCollectionStatus(graphene.Mutation):
         except CollectionRecord.DoesNotExist:
             return UpdateCollectionStatus(success=False)
 
+from django.utils import timezone
+
 class LogCollection(graphene.Mutation):
     class Arguments:
         area_id = graphene.Int(required=True)
         status = graphene.String(required=True)
         amount_collected = graphene.Float(required=True)
-        timestamp = graphene.DateTime(required=True)
         household_id = graphene.Int(required=False)
         institute_id = graphene.Int(required=False)
 
@@ -67,7 +68,7 @@ class LogCollection(graphene.Mutation):
     success = graphene.Boolean()
 
     @authenticate_mutation
-    def mutate(self, info, area_id, status, amount_collected, timestamp, household_id=None, institute_id=None):
+    def mutate(self, info, area_id, status, amount_collected, household_id=None, institute_id=None):
         try:
             worker = info.context.user
             kwargs = {
@@ -75,7 +76,7 @@ class LogCollection(graphene.Mutation):
                 'area_id': area_id,
                 'status': status,
                 'amount_collected': amount_collected,
-                'timestamp': timestamp
+                'timestamp': timezone.now()
             }
             if household_id:
                 kwargs['household_id'] = household_id
@@ -96,7 +97,46 @@ class LogCollection(graphene.Mutation):
             logging.error(f"Error logging collection: {e}")
             return LogCollection(success=False)
 
+class RegisterInstitute(graphene.Mutation):
+    class Arguments:
+        district = graphene.String(required=True)
+        ward = graphene.String(required=True)
+        village = graphene.String(required=True)
+        house_number = graphene.String(required=True)
+        postcode = graphene.String(required=True)
+        owners_name = graphene.String(required=True)
+        owners_contact = graphene.String(required=True)
+        waste_bin_present = graphene.String(required=True)
+        latitude = graphene.Float(required=True)
+        longitude = graphene.Float(required=True)
+        area_id = graphene.Int(required=True)
+
+    success = graphene.Boolean()
+
+    @authenticate_mutation
+    def mutate(self, info, district, ward, village, house_number, postcode, owners_name, owners_contact, waste_bin_present, latitude, longitude, area_id):
+        try:
+            Institute.objects.create(
+                district=district,
+                ward=ward,
+                village=village,
+                house_number=house_number,
+                postcode=postcode,
+                owners_name=owners_name,
+                owners_contact=owners_contact,
+                waste_bin_present=waste_bin_present,
+                latitude=latitude,
+                longitude=longitude,
+                area_id=area_id
+            )
+            return RegisterInstitute(success=True)
+        except Exception as e:
+            import logging
+            logging.error(f"Error registering institute: {e}")
+            return RegisterInstitute(success=False)
+
 class WastemanagerMutation(graphene.ObjectType):
     create_household = CreateHousehold.Field()
     update_collection_status = UpdateCollectionStatus.Field()
     log_collection = LogCollection.Field()
+    register_institute = RegisterInstitute.Field()
