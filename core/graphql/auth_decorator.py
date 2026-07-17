@@ -35,9 +35,19 @@ def authenticate_graphql_api(func: F) -> F:
 
 def authenticate_mutation(func: F) -> F:
     @wraps(func)
-    def wrapper(cls: Any, root: Any, info: Any, *args: Any, **kwargs: Any) -> Any:
+    def wrapper(*args: Any, **kwargs: Any) -> Any:
+        info = None
+        for arg in args:
+            if hasattr(arg, 'context'):
+                info = arg
+                break
+                
+        if not info:
+            raise GraphQLError("Authentication required: GraphQL info object missing")
+            
         user = info.context.user
         if not user or not user.is_authenticated:
-            raise Exception("Authentication required")
-        return func(cls, root, info, *args, **kwargs)
+            raise GraphQLError("Authentication required")
+            
+        return func(*args, **kwargs)
     return wrapper
