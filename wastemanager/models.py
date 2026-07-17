@@ -29,6 +29,7 @@ class Household(BaseRegistration):
     owners_contact = models.CharField(max_length=20, null=True, blank=True)
     number_of_household = models.IntegerField(default=1)
     last_collection_status = models.CharField(max_length=50, null=True, blank=True)
+    last_collection_date = models.DateTimeField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.owner_name} - {self.house_number}"

@@ -85,10 +85,11 @@ class LogCollection(graphene.Mutation):
                 
             record = CollectionRecord.objects.create(**kwargs)
             
-            # Update household last_collection_status
+            # Update household last_collection_status and date
             if household_id:
                 h = Household.objects.get(id=household_id)
                 h.last_collection_status = status
+                h.last_collection_date = timezone.now()
                 h.save()
             
             return LogCollection(collection=record, success=True)
