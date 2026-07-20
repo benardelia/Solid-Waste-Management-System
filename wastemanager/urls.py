@@ -2,17 +2,15 @@ from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from .views import (
     ProjectAreaViewSet,
-    HouseholdViewSet,
-    InstituteViewSet,
+    RegistrationViewSet,
     CollectionRecordViewSet,
-    AreaStatsView
+    AreaStatsView,
 )
 
 router = DefaultRouter()
-router.register(r'areas', ProjectAreaViewSet)
-router.register(r'households', HouseholdViewSet)
-router.register(r'institutes', InstituteViewSet)
-router.register(r'collections', CollectionRecordViewSet)
+router.register(r'areas',         ProjectAreaViewSet)
+router.register(r'registrations', RegistrationViewSet)
+router.register(r'collections',   CollectionRecordViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

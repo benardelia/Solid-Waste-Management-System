@@ -1,5 +1,6 @@
 from rest_framework import serializers
-from .models import ProjectArea, Household, Institute, CollectionRecord
+from .models import ProjectArea, Registration, CollectionRecord
+
 
 class ProjectAreaSerializer(serializers.ModelSerializer):
     class Meta:
@@ -7,17 +8,13 @@ class ProjectAreaSerializer(serializers.ModelSerializer):
         fields = '__all__'
         read_only_fields = ('created_at', 'updated_at', 'created_by', 'updated_by')
 
-class HouseholdSerializer(serializers.ModelSerializer):
+
+class RegistrationSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Household
+        model = Registration
         fields = '__all__'
         read_only_fields = ('created_at', 'updated_at', 'created_by', 'updated_by')
 
-class InstituteSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Institute
-        fields = '__all__'
-        read_only_fields = ('created_at', 'updated_at', 'created_by', 'updated_by')
 
 class CollectionRecordSerializer(serializers.ModelSerializer):
     class Meta:
