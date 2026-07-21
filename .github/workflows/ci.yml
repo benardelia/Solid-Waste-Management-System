@@ -1,0 +1,38 @@
+name: Django CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v2
+
+    - name: Build and Start Containers
+      run: |
+        # Create a dummy .env file for CI
+        cp .env.example .env
+        # Start the stack
+        docker compose up -d --build
+        
+    - name: Wait for Database to be Ready
+      run: |
+        echo "Waiting for PostgreSQL to start..."
+        # Wait up to 30 seconds for the database port to be open
+        timeout 30s bash -c 'until docker compose exec -T db pg_isready -U postgres; do sleep 2; done'
+        
+    - name: Run Django System Check
+      run: |
+        docker compose exec -T web python manage.py check
+        
+    - name: Check if migrations can be created (Ensure models are valid)
+      run: |
+        docker compose exec -T web python manage.py makemigrations --check --dry-run
