@@ -16,18 +16,24 @@ jobs:
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v2
 
-    - name: Build and Start Containers
+    - name: Build and Start DB Container
       run: |
         # Create a dummy .env file for CI
         cp .env.example .env
-        # Start the stack
-        docker compose up -d --build
+        # Start only the db first
+        docker compose up -d --build db
         
     - name: Wait for Database to be Ready
       run: |
         echo "Waiting for PostgreSQL to start..."
         # Wait up to 30 seconds for the database port to be open
         timeout 30s bash -c 'until docker compose exec -T db pg_isready -U postgres; do sleep 2; done'
+        
+    - name: Start Web Container
+      run: |
+        docker compose up -d --build web
+        # Give web a few seconds to run its internal migrations
+        sleep 5
         
     - name: Run Django System Check
       run: |

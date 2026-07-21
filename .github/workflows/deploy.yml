@@ -21,9 +21,15 @@ jobs:
             # 2. Pull the latest code from the main branch
             git pull origin main
             
-            # 3. Build and restart the Docker containers using the production override
-            docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+            # 3. Build and restart only the database container first
+            docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d db
             
-            # 4. Create database if it doesn't exist, then run migrations
+            # Wait for PostgreSQL to be ready
+            sleep 5
+            
+            # 4. Create database if it doesn't exist
             docker compose exec -T db psql -U postgres -tc "SELECT 1 FROM pg_database WHERE datname = 'wastemanagement'" | grep -q 1 || docker compose exec -T db createdb -U postgres wastemanagement
-            docker compose exec -T web python manage.py migrate
+            
+            # 5. Build and start the web container
+            # (This will automatically run collectstatic and migrate internally per docker-compose.prod.yml)
+            docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build web
