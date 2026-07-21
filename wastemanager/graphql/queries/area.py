@@ -28,6 +28,7 @@ PaginatedCollectionType = type('PaginatedCollectionType', (graphene.ObjectType,)
 
 class WastemanagerQueries(graphene.ObjectType):
     get_all_areas         = graphene.List(ProjectAreaType)
+    get_area_by_id        = graphene.Field(ProjectAreaType, id=graphene.Int(required=True))
     get_all_registrations = graphene.Field(
         PaginatedRegistrationType,
         pagination=PaginationInput(),
@@ -47,6 +48,14 @@ class WastemanagerQueries(graphene.ObjectType):
     @authenticate_graphql_api
     def resolve_get_all_areas(root, info):
         return ProjectArea.objects.all()
+
+    @staticmethod
+    @authenticate_graphql_api
+    def resolve_get_area_by_id(root, info, id):
+        try:
+            return ProjectArea.objects.get(id=id)
+        except ProjectArea.DoesNotExist:
+            return None
 
     @staticmethod
     @authenticate_graphql_api
