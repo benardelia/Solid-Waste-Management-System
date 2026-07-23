@@ -38,7 +38,7 @@ class Registration(AuditableModel):
     ward                    = models.CharField(max_length=100)
     village                 = models.CharField(max_length=100)
     house_number            = models.CharField(max_length=50, blank=True)
-    postcode                = models.CharField(max_length=20, blank=True)
+    postcode                = models.CharField(max_length=20, blank=True, null=True)
     waste_bin_present       = models.CharField(max_length=50)
     latitude                = models.FloatField()
     longitude               = models.FloatField()
