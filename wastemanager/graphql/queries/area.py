@@ -34,6 +34,7 @@ class WastemanagerQueries(graphene.ObjectType):
         pagination=PaginationInput(),
         area_id=graphene.Int(),
         entity_type=graphene.String(description="Filter by type: household, shop, restaurant, etc."),
+        search=graphene.String(description="Search by owner name or house number"),
     )
     get_all_collections   = graphene.Field(
         PaginatedCollectionType,
@@ -61,12 +62,17 @@ class WastemanagerQueries(graphene.ObjectType):
     @staticmethod
     @authenticate_graphql_api
     @paginated_field(RegistrationType)
-    def resolve_get_all_registrations(root, info, area_id=None, entity_type=None):
+    def resolve_get_all_registrations(root, info, area_id=None, entity_type=None, search=None):
+        from django.db.models import Q
         qs = Registration.objects.all()
         if area_id:
             qs = qs.filter(area_id=area_id)
         if entity_type:
             qs = qs.filter(entity_type=entity_type)
+        if search:
+            qs = qs.filter(
+                Q(owner_name__icontains=search) | Q(house_number__icontains=search)
+            )
         return qs
 
     @staticmethod
