@@ -55,6 +55,7 @@ class Registration(AuditableModel):
 class CollectionRecord(AuditableModel):
     STATUS_CHOICES = (
         ('collected', 'Collected'),
+        ('collected and paid', 'Collected and Paid'),
         ('missed',    'Missed'),
         ('unpaid',    'Unpaid'),
     )
