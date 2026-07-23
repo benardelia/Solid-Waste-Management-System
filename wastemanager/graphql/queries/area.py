@@ -41,6 +41,7 @@ class WastemanagerQueries(graphene.ObjectType):
         area_id=graphene.Int(),
         status=graphene.String(),
         worker_id=graphene.String(),
+        registration_id=graphene.Int(description="Filter by registration"),
     )
     get_area_monthly_stats = graphene.List(AreaMonthlyStatsType, area_id=graphene.Int())
 
@@ -71,7 +72,7 @@ class WastemanagerQueries(graphene.ObjectType):
     @staticmethod
     @authenticate_graphql_api
     @paginated_field(CollectionRecordType)
-    def resolve_get_all_collections(root, info, area_id=None, status=None, worker_id=None):
+    def resolve_get_all_collections(root, info, area_id=None, status=None, worker_id=None, registration_id=None):
         qs = CollectionRecord.objects.all().order_by('-timestamp')
         if area_id:
             qs = qs.filter(area_id=area_id)
@@ -79,6 +80,8 @@ class WastemanagerQueries(graphene.ObjectType):
             qs = qs.filter(status=status)
         if worker_id:
             qs = qs.filter(worker__firebase_uid=worker_id)
+        if registration_id:
+            qs = qs.filter(registration_id=registration_id)
         return qs
 
     @staticmethod

@@ -12,15 +12,19 @@ PaginatedUserType = type('PaginatedUserType', (graphene.ObjectType,), {
 class UserQueries(graphene.ObjectType):
     get_all_users = graphene.Field(
         PaginatedUserType,
-        pagination=PaginationInput()
+        pagination=PaginationInput(),
+        user_type=graphene.String(description="Filter by role: worker, admin, manager, etc."),
     )
     get_user_by_id = graphene.Field(UserType, id=graphene.Int(required=True))
 
     @staticmethod
     @authenticate_graphql_api
     @paginated_field(UserType)
-    def resolve_get_all_users(root, info):
-        return User.objects.all()
+    def resolve_get_all_users(root, info, user_type=None):
+        qs = User.objects.all().order_by('username')
+        if user_type:
+            qs = qs.filter(user_type=user_type)
+        return qs
 
     @staticmethod
     @authenticate_graphql_api
