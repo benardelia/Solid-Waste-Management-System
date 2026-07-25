@@ -20,14 +20,14 @@ jobs:
       run: |
         # Create a dummy .env file for CI
         cp .env.example .env
-        # Start only the db first
-        docker compose up -d --build db
+        # Start only the solidwaste_db first
+        docker compose up -d --build solidwaste_db
         
     - name: Wait for Database to be Ready
       run: |
         echo "Waiting for PostgreSQL to start... "
         # Wait up to 30 seconds for the database port to be open
-        timeout 30s bash -c 'until docker compose exec -T db pg_isready -U postgres; do sleep 2; done'
+        timeout 30s bash -c 'until docker compose exec -T solidwaste_db pg_isready -U postgres; do sleep 2; done'
         
     - name: Start Web Container
       run: |
