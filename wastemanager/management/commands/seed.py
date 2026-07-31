@@ -19,15 +19,25 @@ class Command(BaseCommand):
             Group.objects.get_or_create(name=role_name)
         self.stdout.write('Roles checked/created.')
 
-        # 2. Create Project Areas (Dodoma specific)
-        area_names = ['Chamwino', 'Nzuguni', 'Miyuji', 'Kisasa']
+        # 2. Create Project Areas
+        # Each area carries the map centre used to scatter its registrations,
+        # since areas span different regions.
+        area_specs = [
+            {'name': 'Chamwino', 'district': 'Dodoma Urban', 'code': 'DM', 'lat': -6.15015, 'lng': 35.94699},
+            {'name': 'Nzuguni',  'district': 'Dodoma Urban', 'code': 'DM', 'lat': -6.15015, 'lng': 35.94699},
+            {'name': 'Miyuji',   'district': 'Dodoma Urban', 'code': 'DM', 'lat': -6.15015, 'lng': 35.94699},
+            {'name': 'Kisasa',   'district': 'Dodoma Urban', 'code': 'DM', 'lat': -6.15015, 'lng': 35.94699},
+            {'name': 'Missenyi', 'district': 'Missenyi',     'code': 'MS', 'lat': -1.2103,  'lng': 31.4074},
+        ]
         areas = []
-        for name in area_names:
+        area_specs_by_name = {}
+        for spec in area_specs:
             area, created = ProjectArea.objects.get_or_create(
-                name=name,
+                name=spec['name'],
                 defaults={'monthly_fee': 5000.00}
             )
             areas.append(area)
+            area_specs_by_name[area.name] = spec
         self.stdout.write('Project Areas created.')
 
         # 3. Ensure at least one worker exists for Foreign Keys
@@ -47,29 +57,26 @@ class Command(BaseCommand):
         # 4. Create Registrations
         entity_types = ['household', 'shop', 'restaurant', 'institute']
         registrations = []
-        
-        # Base Dodoma coordinates: -6.15015, 35.94699
-        base_lat = -6.15015
-        base_lng = 35.94699
 
         if Registration.objects.count() < 100:
             for i in range(100):
                 area = random.choice(areas)
+                spec = area_specs_by_name[area.name]
                 entity = random.choice(entity_types)
-                
-                # Add small random offset (~5km radius)
-                lat = base_lat + (random.random() - 0.5) * 0.05
-                lng = base_lng + (random.random() - 0.5) * 0.05
-                
+
+                # Add small random offset (~5km radius) around the area centre
+                lat = spec['lat'] + (random.random() - 0.5) * 0.05
+                lng = spec['lng'] + (random.random() - 0.5) * 0.05
+
                 reg, created = Registration.objects.get_or_create(
                     owner_name=f'Owner {i+1}',
                     defaults={
                         'entity_type': entity,
                         'owners_contact': f'0700{random.randint(100000, 999999)}',
-                        'district': 'Dodoma Urban',
+                        'district': spec['district'],
                         'ward': area.name,
                         'village': f'Street {random.randint(1, 15)}',
-                        'house_number': f'DM-{random.randint(1000, 9999)}',
+                        'house_number': f'{spec["code"]}-{random.randint(1000, 9999)}',
                         'waste_bin_present': random.choice(['Yes', 'No']),
                         'latitude': lat,
                         'longitude': lng,
