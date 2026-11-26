@@ -1,6 +1,7 @@
 services:
   solidwaste_db:
     image: postgres:15-alpine
+    restart: unless-stopped
     environment:
       POSTGRES_DB: ${DB_NAME}
       POSTGRES_USER: ${DB_USER}
@@ -10,6 +11,7 @@ services:
 
   web:
     build: .
+    restart: unless-stopped
     volumes:
       - .:/app
     ports:
