@@ -3,6 +3,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractUser
 from core.middleware import get_current_user
 from django.conf import settings
+from core.roles import ROLE_CHOICES, WORKER
 
 # Create your models here.
 class AuditableModel(models.Model):
@@ -46,13 +47,8 @@ class User(AbstractUser):
     image = models.ImageField(upload_to='core/images/profiles', blank=True)
     user_type = models.CharField(
         max_length=50,
-        choices=[
-            ('admin', 'Admin'),
-            ('land_officer', 'Land Officer'),
-            ('env_officer', 'Environment Officer'),
-            ('worker', 'Worker'),
-        ],
-        default="worker",
+        choices=ROLE_CHOICES,
+        default=WORKER,
     )
     assigned_area = models.ForeignKey(
         'wastemanager.ProjectArea', 
