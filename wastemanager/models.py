@@ -20,18 +20,9 @@ class Registration(AuditableModel):
     changes.
     """
 
-    ENTITY_TYPES = (
-        ('household',   'Household'),
-        ('institute',   'Institute'),
-        ('shop',        'Shop'),
-        ('restaurant',  'Restaurant'),
-        ('hotel',       'Hotel'),
-        ('school',      'School'),
-        ('hospital',    'Hospital'),
-        ('other',       'Other'),
-    )
-
-    entity_type             = models.CharField(max_length=50, choices=ENTITY_TYPES, default='household', db_index=True)
+    # Allowed values live in the reference.EntityType table (managed from the
+    # admin portal), so new kinds of premises need no code or schema change.
+    entity_type             = models.CharField(max_length=50, default='household', db_index=True)
     owner_name              = models.CharField(max_length=255)
     owners_contact          = models.CharField(max_length=20, null=True, blank=True)
     district                = models.CharField(max_length=100)
@@ -48,8 +39,14 @@ class Registration(AuditableModel):
     last_collection_status  = models.CharField(max_length=50, null=True, blank=True)
     last_collection_date    = models.DateTimeField(null=True, blank=True)
 
+    @property
+    def entity_type_label(self):
+        from reference.models import EntityType
+        name = EntityType.objects.filter(code=self.entity_type).values_list('name', flat=True).first()
+        return name or self.entity_type.replace('_', ' ').title()
+
     def __str__(self):
-        return f"{self.get_entity_type_display()}: {self.owner_name} – {self.house_number}"
+        return f"{self.entity_type_label}: {self.owner_name} – {self.house_number}"
 
 
 class CollectionRecord(AuditableModel):

@@ -30,7 +30,7 @@ class CollectionRecordAdmin(admin.ModelAdmin):
 
     def get_entity_name(self, obj):
         if obj.registration:
-            return f"{obj.registration.get_entity_type_display()}: {obj.registration.owner_name}"
+            return f"{obj.registration.entity_type_label}: {obj.registration.owner_name}"
         return "Unknown"
 
     get_entity_name.short_description = 'Entity'

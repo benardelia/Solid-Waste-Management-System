@@ -1,0 +1,1991 @@
+[
+ {
+  "region": "Dodoma",
+  "districts": [
+   {
+    "name": "dodoma urban",
+    "wards": [
+     {
+      "name": "Uhuru",
+      "postcode": "41101"
+     },
+     {
+      "name": "Viwandani",
+      "postcode": "41102"
+     },
+     {
+      "name": "Madukani",
+      "postcode": "41103"
+     },
+     {
+      "name": "Tambukareli",
+      "postcode": "41104"
+     },
+     {
+      "name": "Makole",
+      "postcode": "41105"
+     },
+     {
+      "name": "Majengo",
+      "postcode": "41106"
+     },
+     {
+      "name": "Dodoma Makulu",
+      "postcode": "41107"
+     },
+     {
+      "name": "Hazina",
+      "postcode": "41108"
+     },
+     {
+      "name": "Chamwino",
+      "postcode": "41109"
+     },
+     {
+      "name": "Kilimani",
+      "postcode": "41110"
+     },
+     {
+      "name": "Kikuyu kaskazini",
+      "postcode": "41111"
+     },
+     {
+      "name": "Kikuyu kusini",
+      "postcode": "41112"
+     },
+     {
+      "name": "Miyuji",
+      "postcode": "41113"
+     },
+     {
+      "name": "Kizota",
+      "postcode": "41114"
+     },
+     {
+      "name": "Ndege",
+      "postcode": "41115"
+     },
+     {
+      "name": "Mkonze",
+      "postcode": "41116"
+     },
+     {
+      "name": "Nkuhungu",
+      "postcode": "41117"
+     },
+     {
+      "name": "Ihumwa",
+      "postcode": "41118"
+     },
+     {
+      "name": "Ng'onng'onha",
+      "postcode": "41119"
+     },
+     {
+      "name": "Matumbulu",
+      "postcode": "41120"
+     }
+    ]
+   },
+   {
+    "name": "dodoma",
+    "wards": [
+     {
+      "name": "Makutopora",
+      "postcode": "41201"
+     },
+     {
+      "name": "Ipala",
+      "postcode": "41202"
+     },
+     {
+      "name": "Chihanga",
+      "postcode": "41203"
+     },
+     {
+      "name": "Bwawani",
+      "postcode": "41204"
+     },
+     {
+      "name": "Msalato",
+      "postcode": "41205"
+     },
+     {
+      "name": "Kikombo",
+      "postcode": "41206"
+     },
+     {
+      "name": "Mtumba",
+      "postcode": "41207"
+     },
+     {
+      "name": "Zuzu",
+      "postcode": "41208"
+     },
+     {
+      "name": "Nala",
+      "postcode": "41209"
+     },
+     {
+      "name": "Mbabala",
+      "postcode": "41210"
+     },
+     {
+      "name": "Mbalawala",
+      "postcode": "41211"
+     },
+     {
+      "name": "Mpunguzi",
+      "postcode": "41212"
+     },
+     {
+      "name": "Mnadani",
+      "postcode": "41213"
+     },
+     {
+      "name": "Chigongwe",
+      "postcode": "41214"
+     },
+     {
+      "name": "Chahwa",
+      "postcode": "41215"
+     },
+     {
+      "name": "Ipagala",
+      "postcode": "41217"
+     },
+     {
+      "name": "Iyumbu",
+      "postcode": "41218"
+     },
+     {
+      "name": "Ntyuka",
+      "postcode": "41219"
+     },
+     {
+      "name": "Nzuguni",
+      "postcode": "41220"
+     },
+     {
+      "name": "Hombolo Makulu",
+      "postcode": "41221"
+     }
+    ]
+   },
+   {
+    "name": "bahi",
+    "wards": [
+     {
+      "name": "Bahi",
+      "postcode": "41301"
+     },
+     {
+      "name": "Ibihwa",
+      "postcode": "41302"
+     },
+     {
+      "name": "Ilindi",
+      "postcode": "41303"
+     },
+     {
+      "name": "Kigwe",
+      "postcode": "41304"
+     },
+     {
+      "name": "Mpamamtwa",
+      "postcode": "41305"
+     },
+     {
+      "name": "Chali",
+      "postcode": "41306"
+     },
+     {
+      "name": "Chikola",
+      "postcode": "41307"
+     },
+     {
+      "name": "Chipanga",
+      "postcode": "41308"
+     },
+     {
+      "name": "Nondwa",
+      "postcode": "41309"
+     },
+     {
+      "name": "Mpalanga",
+      "postcode": "41310"
+     },
+     {
+      "name": "Lamaiti",
+      "postcode": "41311"
+     },
+     {
+      "name": "Makanda",
+      "postcode": "41312"
+     },
+     {
+      "name": "Msisi",
+      "postcode": "41313"
+     },
+     {
+      "name": "Mundemu",
+      "postcode": "41314"
+     },
+     {
+      "name": "Zanka",
+      "postcode": "41315"
+     },
+     {
+      "name": "Chibelela",
+      "postcode": "41316"
+     },
+     {
+      "name": "Ibugule",
+      "postcode": "41317"
+     },
+     {
+      "name": "Mtitaa",
+      "postcode": "41318"
+     },
+     {
+      "name": "Mwitikira",
+      "postcode": "41319"
+     },
+     {
+      "name": "Chifutuka",
+      "postcode": "41320"
+     },
+     {
+      "name": "Mpinga",
+      "postcode": "41321"
+     },
+     {
+      "name": "Babayu",
+      "postcode": "41322"
+     }
+    ]
+   },
+   {
+    "name": "chamwino",
+    "wards": [
+     {
+      "name": "Chilonwa",
+      "postcode": "41401"
+     },
+     {
+      "name": "Buigiri",
+      "postcode": "41402"
+     },
+     {
+      "name": "Majeleko",
+      "postcode": "41403"
+     },
+     {
+      "name": "Manchali",
+      "postcode": "41404"
+     },
+     {
+      "name": "Msanga",
+      "postcode": "41405"
+     },
+     {
+      "name": "Msamalo",
+      "postcode": "41406"
+     },
+     {
+      "name": "Ikowa",
+      "postcode": "41407"
+     },
+     {
+      "name": "Membe",
+      "postcode": "41408"
+     },
+     {
+      "name": "Dabalo",
+      "postcode": "41409"
+     },
+     {
+      "name": "Haneti",
+      "postcode": "41410"
+     },
+     {
+      "name": "Itiso",
+      "postcode": "41411"
+     },
+     {
+      "name": "Segala",
+      "postcode": "41412"
+     },
+     {
+      "name": "Mvumi Misheni",
+      "postcode": "41413"
+     },
+     {
+      "name": "Handali",
+      "postcode": "41414"
+     },
+     {
+      "name": "Idifu",
+      "postcode": "41415"
+     },
+     {
+      "name": "Igandu",
+      "postcode": "41416"
+     },
+     {
+      "name": "Muungano",
+      "postcode": "41417"
+     },
+     {
+      "name": "Mvumi Makulu",
+      "postcode": "41418"
+     },
+     {
+      "name": "Fufu",
+      "postcode": "41419"
+     },
+     {
+      "name": "Iringa Mvumi",
+      "postcode": "41420"
+     },
+     {
+      "name": "Makang'wa",
+      "postcode": "41421"
+     },
+     {
+      "name": "Manzase",
+      "postcode": "41422"
+     },
+     {
+      "name": "Mlowa bwawani",
+      "postcode": "41423"
+     },
+     {
+      "name": "Mpwayungu",
+      "postcode": "41424"
+     },
+     {
+      "name": "Chinugulu",
+      "postcode": "41425"
+     },
+     {
+      "name": "Huzi",
+      "postcode": "41426"
+     },
+     {
+      "name": "Manda",
+      "postcode": "41427"
+     },
+     {
+      "name": "Nghambaku",
+      "postcode": "41428"
+     },
+     {
+      "name": "Zajilwa",
+      "postcode": "41430"
+     },
+     {
+      "name": "Chiboli",
+      "postcode": "41431"
+     },
+     {
+      "name": "Loje",
+      "postcode": "41432"
+     },
+     {
+      "name": "Nhinhi",
+      "postcode": "41433"
+     },
+     {
+      "name": "Chamwino",
+      "postcode": "41434"
+     },
+     {
+      "name": "Nghaheleze",
+      "postcode": "41435"
+     },
+     {
+      "name": "Ikombolinga",
+      "postcode": "41436"
+     },
+     {
+      "name": "Barabarani",
+      "postcode": "41437"
+     }
+    ]
+   },
+   {
+    "name": "kongwa",
+    "wards": [
+     {
+      "name": "Kongwa",
+      "postcode": "41501"
+     },
+     {
+      "name": "Ugogoni",
+      "postcode": "41502"
+     },
+     {
+      "name": "Sagara",
+      "postcode": "41503"
+     },
+     {
+      "name": "Mlali",
+      "postcode": "41505"
+     },
+     {
+      "name": "Chamkoroma",
+      "postcode": "41506"
+     },
+     {
+      "name": "Pandambili",
+      "postcode": "41507"
+     },
+     {
+      "name": "Kibaigwa",
+      "postcode": "41508"
+     },
+     {
+      "name": "Mtanana",
+      "postcode": "41509"
+     },
+     {
+      "name": "Njoge",
+      "postcode": "41510"
+     },
+     {
+      "name": "Sejeli",
+      "postcode": "41511"
+     },
+     {
+      "name": "Hogoro",
+      "postcode": "41512"
+     },
+     {
+      "name": "Mkoka",
+      "postcode": "41513"
+     },
+     {
+      "name": "Zoissa",
+      "postcode": "41514"
+     },
+     {
+      "name": "Chitego",
+      "postcode": "41515"
+     },
+     {
+      "name": "Matongoro",
+      "postcode": "41516"
+     },
+     {
+      "name": "Makawa",
+      "postcode": "41517"
+     },
+     {
+      "name": "Songambele",
+      "postcode": "41518"
+     },
+     {
+      "name": "Nghumbi",
+      "postcode": "41519"
+     },
+     {
+      "name": "Lenjulu",
+      "postcode": "41520"
+     },
+     {
+      "name": "Chiwe",
+      "postcode": "41521"
+     },
+     {
+      "name": "Ngomai",
+      "postcode": "41522"
+     }
+    ]
+   },
+   {
+    "name": "mpwapwa",
+    "wards": [
+     {
+      "name": "Mpwapwa Mjini",
+      "postcode": "41601"
+     },
+     {
+      "name": "Mazae",
+      "postcode": "41602"
+     },
+     {
+      "name": "Ving'hawe",
+      "postcode": "41603"
+     },
+     {
+      "name": "Gulwe",
+      "postcode": "41604"
+     },
+     {
+      "name": "Kimagai",
+      "postcode": "41605"
+     },
+     {
+      "name": "Berege",
+      "postcode": "41606"
+     },
+     {
+      "name": "Chunyu",
+      "postcode": "41607"
+     },
+     {
+      "name": "Nghambi",
+      "postcode": "41608"
+     },
+     {
+      "name": "Lupeta",
+      "postcode": "41609"
+     },
+     {
+      "name": "Chitemo",
+      "postcode": "41610"
+     },
+     {
+      "name": "Wotta",
+      "postcode": "41611"
+     },
+     {
+      "name": "Kingiti",
+      "postcode": "41612"
+     },
+     {
+      "name": "Kibakwe",
+      "postcode": "41613"
+     },
+     {
+      "name": "Godegode",
+      "postcode": "41614"
+     },
+     {
+      "name": "Matomondo",
+      "postcode": "41615"
+     },
+     {
+      "name": "Pwaga",
+      "postcode": "41616"
+     },
+     {
+      "name": "Lumuma",
+      "postcode": "41617"
+     },
+     {
+      "name": "Luhundwa",
+      "postcode": "41618"
+     },
+     {
+      "name": "Mlunduzi",
+      "postcode": "41619"
+     },
+     {
+      "name": "Mima",
+      "postcode": "41620"
+     },
+     {
+      "name": "Rudi",
+      "postcode": "41621"
+     },
+     {
+      "name": "Massa",
+      "postcode": "41622"
+     },
+     {
+      "name": "Mbuga",
+      "postcode": "41623"
+     },
+     {
+      "name": "Ipera",
+      "postcode": "41624"
+     },
+     {
+      "name": "Iwondo",
+      "postcode": "41625"
+     },
+     {
+      "name": "Lufu",
+      "postcode": "41626"
+     },
+     {
+      "name": "Galigali",
+      "postcode": "41627"
+     },
+     {
+      "name": "Malolo",
+      "postcode": "41628"
+     },
+     {
+      "name": "Mtera",
+      "postcode": "41629"
+     },
+     {
+      "name": "Chipogoro",
+      "postcode": "41630"
+     },
+     {
+      "name": "Mlembule",
+      "postcode": "41631"
+     },
+     {
+      "name": "Wangi",
+      "postcode": "41632"
+     },
+     {
+      "name": "Mang'aliza",
+      "postcode": "41633"
+     }
+    ]
+   },
+   {
+    "name": "kondoa",
+    "wards": [
+     {
+      "name": "Kondoa Mjini",
+      "postcode": "41701"
+     },
+     {
+      "name": "Suruke",
+      "postcode": "41702"
+     },
+     {
+      "name": "Kingale",
+      "postcode": "41703"
+     },
+     {
+      "name": "Kolo",
+      "postcode": "41704"
+     },
+     {
+      "name": "Kilimani",
+      "postcode": "41705"
+     },
+     {
+      "name": "Chemchem",
+      "postcode": "41706"
+     },
+     {
+      "name": "Thawi",
+      "postcode": "41707"
+     },
+     {
+      "name": "Soera",
+      "postcode": "41708"
+     },
+     {
+      "name": "Mnenia",
+      "postcode": "41709"
+     },
+     {
+      "name": "Masange",
+      "postcode": "41710"
+     },
+     {
+      "name": "Kikilo",
+      "postcode": "41711"
+     },
+     {
+      "name": "Kisese",
+      "postcode": "41712"
+     },
+     {
+      "name": "Kikore",
+      "postcode": "41713"
+     },
+     {
+      "name": "Pahi",
+      "postcode": "41714"
+     },
+     {
+      "name": "Bumbuta",
+      "postcode": "41715"
+     },
+     {
+      "name": "Busi",
+      "postcode": "41716"
+     },
+     {
+      "name": "Kalamba",
+      "postcode": "41717"
+     },
+     {
+      "name": "Haubi",
+      "postcode": "41718"
+     },
+     {
+      "name": "Kwadelo",
+      "postcode": "41719"
+     },
+     {
+      "name": "Itaswi",
+      "postcode": "41720"
+     },
+     {
+      "name": "Itololo",
+      "postcode": "41721"
+     },
+     {
+      "name": "Kinyasi",
+      "postcode": "41722"
+     },
+     {
+      "name": "Hondomairo",
+      "postcode": "41723"
+     },
+     {
+      "name": "Bereko",
+      "postcode": "41724"
+     },
+     {
+      "name": "Salanka",
+      "postcode": "41725"
+     },
+     {
+      "name": "Keikei",
+      "postcode": "41726"
+     },
+     {
+      "name": "Serya",
+      "postcode": "41727"
+     },
+     {
+      "name": "Bolisa",
+      "postcode": "41728"
+     },
+     {
+      "name": "Changaa",
+      "postcode": "41729"
+     }
+    ]
+   },
+   {
+    "name": "chemba",
+    "wards": [
+     {
+      "name": "Chemba",
+      "postcode": "41801"
+     },
+     {
+      "name": "Chandama",
+      "postcode": "41802"
+     },
+     {
+      "name": "Mrijo",
+      "postcode": "41803"
+     },
+     {
+      "name": "Goima",
+      "postcode": "41804"
+     },
+     {
+      "name": "Paranga",
+      "postcode": "41805"
+     },
+     {
+      "name": "Gwandi",
+      "postcode": "41806"
+     },
+     {
+      "name": "Farkwa",
+      "postcode": "41807"
+     },
+     {
+      "name": "Kwamtoro",
+      "postcode": "41808"
+     },
+     {
+      "name": "Lalta",
+      "postcode": "41809"
+     },
+     {
+      "name": "Ovada",
+      "postcode": "41810"
+     },
+     {
+      "name": "Sanzawa",
+      "postcode": "41811"
+     },
+     {
+      "name": "Mpendo",
+      "postcode": "41812"
+     },
+     {
+      "name": "Makorongo",
+      "postcode": "41813"
+     },
+     {
+      "name": "Mondo",
+      "postcode": "41814"
+     },
+     {
+      "name": "Dalai",
+      "postcode": "41815"
+     },
+     {
+      "name": "Jangalo",
+      "postcode": "41816"
+     },
+     {
+      "name": "Churuku",
+      "postcode": "41817"
+     },
+     {
+      "name": "Msaada",
+      "postcode": "41818"
+     },
+     {
+      "name": "Songolo",
+      "postcode": "41819"
+     },
+     {
+      "name": "Soya",
+      "postcode": "41820"
+     },
+     {
+      "name": "Kimaha",
+      "postcode": "41821"
+     },
+     {
+      "name": "Kidoka",
+      "postcode": "41822"
+     },
+     {
+      "name": "Babayu",
+      "postcode": "41823"
+     },
+     {
+      "name": "Tumbakose",
+      "postcode": "41824"
+     },
+     {
+      "name": "Kinyamshindo",
+      "postcode": "41825"
+     },
+     {
+      "name": "Lahoda",
+      "postcode": "41826"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "region": "Arusha",
+  "districts": [
+   {
+    "name": "arusha cbd",
+    "wards": [
+     {
+      "name": "SEKEI",
+      "postcode": "23101"
+     },
+     {
+      "name": "KATI",
+      "postcode": "23102"
+     },
+     {
+      "name": "KALOLENI",
+      "postcode": "23103"
+     },
+     {
+      "name": "LEVOLOSI",
+      "postcode": "23104"
+     },
+     {
+      "name": "NGARENARO",
+      "postcode": "23105"
+     },
+     {
+      "name": "ELERAI",
+      "postcode": "23106"
+     },
+     {
+      "name": "UNGA LIMITED",
+      "postcode": "23107"
+     },
+     {
+      "name": "DARAJA II",
+      "postcode": "23108"
+     },
+     {
+      "name": "THEMI",
+      "postcode": "23109"
+     },
+     {
+      "name": "KIMANDOLU",
+      "postcode": "23110"
+     },
+     {
+      "name": "OLORIENI",
+      "postcode": "23111"
+     },
+     {
+      "name": "BARAA",
+      "postcode": "23112"
+     },
+     {
+      "name": "LEMARA",
+      "postcode": "23113"
+     },
+     {
+      "name": "ENGUTOTO",
+      "postcode": "23114"
+     },
+     {
+      "name": "SOKON 1",
+      "postcode": "23115"
+     },
+     {
+      "name": "SOMBETINI",
+      "postcode": "23116"
+     },
+     {
+      "name": "TERRAT",
+      "postcode": "23117"
+     },
+     {
+      "name": "MOSHONO",
+      "postcode": "23118"
+     },
+     {
+      "name": "OLASITI",
+      "postcode": "23119"
+     },
+     {
+      "name": "Moivaro",
+      "postcode": "23120"
+     },
+     {
+      "name": "Sinoni",
+      "postcode": "23121"
+     },
+     {
+      "name": "Muriet",
+      "postcode": "23122"
+     },
+     {
+      "name": "Osunyai Jr",
+      "postcode": "23123"
+     },
+     {
+      "name": "Sakina",
+      "postcode": "23124"
+     },
+     {
+      "name": "Olmoti",
+      "postcode": "23125"
+     }
+    ]
+   },
+   {
+    "name": "arusha",
+    "wards": [
+     {
+      "name": "Olturumet",
+      "postcode": "23201"
+     },
+     {
+      "name": "Mwandet",
+      "postcode": "23202"
+     },
+     {
+      "name": "Olkokola",
+      "postcode": "23203"
+     },
+     {
+      "name": "Oldonyosambu",
+      "postcode": "23204"
+     },
+     {
+      "name": "Musa",
+      "postcode": "23205"
+     },
+     {
+      "name": "Kisongo",
+      "postcode": "23206"
+     },
+     {
+      "name": "Bangata",
+      "postcode": "23207"
+     },
+     {
+      "name": "Sokon II",
+      "postcode": "23208"
+     },
+     {
+      "name": "Kiranyi",
+      "postcode": "23209"
+     },
+     {
+      "name": "Olorien",
+      "postcode": "23210"
+     },
+     {
+      "name": "Ilkiding'a",
+      "postcode": "23211"
+     },
+     {
+      "name": "Sambasha",
+      "postcode": "23212"
+     },
+     {
+      "name": "Kimnyaki",
+      "postcode": "23213"
+     },
+     {
+      "name": "Olmotonyi",
+      "postcode": "23214"
+     },
+     {
+      "name": "Oljoro",
+      "postcode": "23215"
+     },
+     {
+      "name": "Olturoto",
+      "postcode": "23216"
+     },
+     {
+      "name": "Moivo",
+      "postcode": "23217"
+     },
+     {
+      "name": "Mlangarini",
+      "postcode": "23218"
+     },
+     {
+      "name": "Nduruma",
+      "postcode": "23219"
+     },
+     {
+      "name": "Bwawani",
+      "postcode": "23220"
+     },
+     {
+      "name": "Mateves",
+      "postcode": "23221"
+     },
+     {
+      "name": "Lemanyata",
+      "postcode": "23222"
+     },
+     {
+      "name": "Oldonyowass",
+      "postcode": "23223"
+     },
+     {
+      "name": "Laroi",
+      "postcode": "23224"
+     },
+     {
+      "name": "Kiutu",
+      "postcode": "23225"
+     },
+     {
+      "name": "Tarakwa",
+      "postcode": "23226"
+     },
+     {
+      "name": "Ilboru",
+      "postcode": "23227"
+     }
+    ]
+   },
+   {
+    "name": "arumeru",
+    "wards": [
+     {
+      "name": "Nga'resero",
+      "postcode": "23301"
+     },
+     {
+      "name": "Maji ya Chai",
+      "postcode": "23302"
+     },
+     {
+      "name": "Nkoaranga",
+      "postcode": "23303"
+     },
+     {
+      "name": "Poli",
+      "postcode": "23304"
+     },
+     {
+      "name": "Seela Sing'isi",
+      "postcode": "23305"
+     },
+     {
+      "name": "Akheri",
+      "postcode": "23306"
+     },
+     {
+      "name": "Nkoarisambu",
+      "postcode": "23307"
+     },
+     {
+      "name": "Nkoanrua",
+      "postcode": "23308"
+     },
+     {
+      "name": "Songoro",
+      "postcode": "23309"
+     },
+     {
+      "name": "Ngarenanyuki",
+      "postcode": "23310"
+     },
+     {
+      "name": "Kikwe",
+      "postcode": "23311"
+     },
+     {
+      "name": "Mbuguni",
+      "postcode": "23312"
+     },
+     {
+      "name": "Makiba",
+      "postcode": "23313"
+     },
+     {
+      "name": "Maroroni",
+      "postcode": "23314"
+     },
+     {
+      "name": "Kikatiti",
+      "postcode": "23315"
+     },
+     {
+      "name": "King'ori",
+      "postcode": "23316"
+     },
+     {
+      "name": "Leguruki",
+      "postcode": "23317"
+     },
+     {
+      "name": "Shambarai Burka",
+      "postcode": "23318"
+     },
+     {
+      "name": "Majengo",
+      "postcode": "23319"
+     },
+     {
+      "name": "Malula",
+      "postcode": "23320"
+     },
+     {
+      "name": "Uwiro",
+      "postcode": "23321"
+     },
+     {
+      "name": "Ngabobo",
+      "postcode": "23322"
+     },
+     {
+      "name": "Maruvango",
+      "postcode": "23323"
+     },
+     {
+      "name": "Imbaseni",
+      "postcode": "23324"
+     },
+     {
+      "name": "Ambureni",
+      "postcode": "23325"
+     },
+     {
+      "name": "Nkoanekoli",
+      "postcode": "23326"
+     }
+    ]
+   },
+   {
+    "name": "monduli",
+    "wards": [
+     {
+      "name": "Monduli Mjini",
+      "postcode": "23401"
+     },
+     {
+      "name": "Engutoto",
+      "postcode": "23402"
+     },
+     {
+      "name": "Sepeko",
+      "postcode": "23403"
+     },
+     {
+      "name": "Monduli Juu",
+      "postcode": "23404"
+     },
+     {
+      "name": "Meserani",
+      "postcode": "23405"
+     },
+     {
+      "name": "Moita",
+      "postcode": "23406"
+     },
+     {
+      "name": "Lolkisale",
+      "postcode": "23407"
+     },
+     {
+      "name": "Mswakini",
+      "postcode": "23408"
+     },
+     {
+      "name": "Esilalei",
+      "postcode": "23409"
+     },
+     {
+      "name": "Mto wa mbu",
+      "postcode": "23410"
+     },
+     {
+      "name": "Majengo",
+      "postcode": "23411"
+     },
+     {
+      "name": "Makuyuni",
+      "postcode": "23412"
+     },
+     {
+      "name": "Lepurko",
+      "postcode": "23413"
+     },
+     {
+      "name": "Selela",
+      "postcode": "23414"
+     },
+     {
+      "name": "Engaruka",
+      "postcode": "23415"
+     },
+     {
+      "name": "Mfereji",
+      "postcode": "23416"
+     },
+     {
+      "name": "Lashaine",
+      "postcode": "23417"
+     },
+     {
+      "name": "Naalarami",
+      "postcode": "23418"
+     },
+     {
+      "name": "Lemooti",
+      "postcode": "23419"
+     },
+     {
+      "name": "Migungani",
+      "postcode": "23420"
+     }
+    ]
+   },
+   {
+    "name": "longido",
+    "wards": [
+     {
+      "name": "Longido",
+      "postcode": "23501"
+     },
+     {
+      "name": "Kimokouwa",
+      "postcode": "23502"
+     },
+     {
+      "name": "Namanga",
+      "postcode": "23503"
+     },
+     {
+      "name": "Tingatinga",
+      "postcode": "23504"
+     },
+     {
+      "name": "Olmolog",
+      "postcode": "23505"
+     },
+     {
+      "name": "Kamwanga",
+      "postcode": "23506"
+     },
+     {
+      "name": "Engikaret",
+      "postcode": "23507"
+     },
+     {
+      "name": "Elang'atadapash",
+      "postcode": "23508"
+     },
+     {
+      "name": "Ketumbeine",
+      "postcode": "23509"
+     },
+     {
+      "name": "Mundarara",
+      "postcode": "23510"
+     },
+     {
+      "name": "Engarenaibor",
+      "postcode": "23511"
+     },
+     {
+      "name": "Matale A",
+      "postcode": "23512"
+     },
+     {
+      "name": "Gelai Lumbwa",
+      "postcode": "23513"
+     },
+     {
+      "name": "Gelai Meirugoi",
+      "postcode": "23514"
+     },
+     {
+      "name": "Ilorienito",
+      "postcode": "23515"
+     },
+     {
+      "name": "Orbomba",
+      "postcode": "23516"
+     },
+     {
+      "name": "Noondoto",
+      "postcode": "23517"
+     },
+     {
+      "name": "Sinya",
+      "postcode": "23518"
+     }
+    ]
+   },
+   {
+    "name": "karatu",
+    "wards": [
+     {
+      "name": "Karatu",
+      "postcode": "23601"
+     },
+     {
+      "name": "Ganako",
+      "postcode": "23602"
+     },
+     {
+      "name": "Rhotia",
+      "postcode": "23603"
+     },
+     {
+      "name": "Mbulumbulu",
+      "postcode": "23604"
+     },
+     {
+      "name": "Endamarariek",
+      "postcode": "23605"
+     },
+     {
+      "name": "Buger",
+      "postcode": "23606"
+     },
+     {
+      "name": "Endabashi",
+      "postcode": "23608"
+     },
+     {
+      "name": "Qurus",
+      "postcode": "23609"
+     },
+     {
+      "name": "Oldeani",
+      "postcode": "23610"
+     },
+     {
+      "name": "Daa",
+      "postcode": "23611"
+     },
+     {
+      "name": "Mang'ola",
+      "postcode": "23612"
+     },
+     {
+      "name": "Baray",
+      "postcode": "23613"
+     },
+     {
+      "name": "Endamaghang",
+      "postcode": "23614"
+     }
+    ]
+   },
+   {
+    "name": "serengeti",
+    "wards": [
+     {
+      "name": "Orgosorok",
+      "postcode": "23701"
+     },
+     {
+      "name": "Oloirien/ Magaiduru",
+      "postcode": "23702"
+     },
+     {
+      "name": "Oloipiri",
+      "postcode": "23703"
+     },
+     {
+      "name": "Enguserosambu",
+      "postcode": "23704"
+     },
+     {
+      "name": "Samunge",
+      "postcode": "23705"
+     },
+     {
+      "name": "Maalon",
+      "postcode": "23706"
+     },
+     {
+      "name": "Arash",
+      "postcode": "23707"
+     },
+     {
+      "name": "Soitsambu",
+      "postcode": "23708"
+     },
+     {
+      "name": "Ololosokwan",
+      "postcode": "23709"
+     },
+     {
+      "name": "Digodigo",
+      "postcode": "23710"
+     },
+     {
+      "name": "Oldonyosambu",
+      "postcode": "23711"
+     },
+     {
+      "name": "Sale",
+      "postcode": "23712"
+     },
+     {
+      "name": "Pinyinyi",
+      "postcode": "23713"
+     },
+     {
+      "name": "Malambo",
+      "postcode": "23714"
+     },
+     {
+      "name": "Olbalbal",
+      "postcode": "23715"
+     },
+     {
+      "name": "Alailelai",
+      "postcode": "23716"
+     },
+     {
+      "name": "Naiyobi",
+      "postcode": "23717"
+     },
+     {
+      "name": "Nainokanoka",
+      "postcode": "23718"
+     },
+     {
+      "name": "Ngorongoro",
+      "postcode": "23719"
+     },
+     {
+      "name": "Enduleni",
+      "postcode": "23720"
+     },
+     {
+      "name": "Kakesio",
+      "postcode": "23721"
+     },
+     {
+      "name": "Ngoile",
+      "postcode": "23723"
+     },
+     {
+      "name": "Misigiyo",
+      "postcode": "23724"
+     },
+     {
+      "name": "Eyasi",
+      "postcode": "23725"
+     },
+     {
+      "name": "Alaitolei",
+      "postcode": "23726"
+     },
+     {
+      "name": "Kirangi",
+      "postcode": "23727"
+     },
+     {
+      "name": "Engaresero",
+      "postcode": "23728"
+     },
+     {
+      "name": "Piyaya",
+      "postcode": "23729"
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "region": "Kigoma",
+  "districts": [
+   {
+    "name": "kigoma cbd",
+    "wards": [
+     {
+      "name": "Kigoma",
+      "postcode": "47101"
+     },
+     {
+      "name": "Bangwe",
+      "postcode": "47102"
+     },
+     {
+      "name": "Mwanga Kaskazini",
+      "postcode": "47103"
+     },
+     {
+      "name": "Mwanga Kusini",
+      "postcode": "47104"
+     },
+     {
+      "name": "Gungu",
+      "postcode": "47105"
+     },
+     {
+      "name": "Buhanda",
+      "postcode": "47106"
+     },
+     {
+      "name": "Kitongoni",
+      "postcode": "47107"
+     },
+     {
+      "name": "Kasingirima",
+      "postcode": "47108"
+     },
+     {
+      "name": "Machinjioni",
+      "postcode": "47109"
+     },
+     {
+      "name": "Majengo",
+      "postcode": "47110"
+     },
+     {
+      "name": "Rubuga",
+      "postcode": "47111"
+     },
+     {
+      "name": "Kasimbu",
+      "postcode": "47112"
+     },
+     {
+      "name": "Kagera",
+      "postcode": "47113"
+     },
+     {
+      "name": "Rusimbi",
+      "postcode": "47114"
+     },
+     {
+      "name": "Katubuka",
+      "postcode": "47115"
+     },
+     {
+      "name": "Kibirizi",
+      "postcode": "47116"
+     },
+     {
+      "name": "Buzebazeba",
+      "postcode": "47117"
+     },
+     {
+      "name": "Kipampa",
+      "postcode": "47118"
+     },
+     {
+      "name": "Businde",
+      "postcode": "47119"
+     }
+    ]
+   },
+   {
+    "name": "kigoma",
+    "wards": [
+     {
+      "name": "Mahembe",
+      "postcode": "47201"
+     },
+     {
+      "name": "Bitale",
+      "postcode": "47202"
+     },
+     {
+      "name": "Mkongoro",
+      "postcode": "47203"
+     },
+     {
+      "name": "Matendo",
+      "postcode": "47204"
+     },
+     {
+      "name": "Mkigo",
+      "postcode": "47205"
+     },
+     {
+      "name": "Kalinzi",
+      "postcode": "47206"
+     },
+     {
+      "name": "Kagunga",
+      "postcode": "47207"
+     },
+     {
+      "name": "Mwamgongo",
+      "postcode": "47208"
+     },
+     {
+      "name": "Kagongo",
+      "postcode": "47209"
+     },
+     {
+      "name": "Kamara",
+      "postcode": "47210"
+     },
+     {
+      "name": "Mwandiga",
+      "postcode": "47211"
+     }
+    ]
+   },
+   {
+    "name": "kasulu",
+    "wards": [
+     {
+      "name": "Kasulu Mjini",
+      "postcode": "47301"
+     },
+     {
+      "name": "Kwaga",
+      "postcode": "47302"
+     },
+     {
+      "name": "Rusesa",
+      "postcode": "47303"
+     },
+     {
+      "name": "Muzye",
+      "postcode": "47304"
+     },
+     {
+      "name": "Rungwe Mpya",
+      "postcode": "47305"
+     },
+     {
+      "name": "Murufiti",
+      "postcode": "47306"
+     },
+     {
+      "name": "Musambara",
+      "postcode": "47307"
+     },
+     {
+      "name": "Kigondo",
+      "postcode": "47308"
+     },
+     {
+      "name": "Ruhita",
+      "postcode": "47309"
+     },
+     {
+      "name": "Titye",
+      "postcode": "47310"
+     },
+     {
+      "name": "Nyamunyusi",
+      "postcode": "47311"
+     },
+     {
+      "name": "Buhoro",
+      "postcode": "47312"
+     },
+     {
+      "name": "Nyakitonto",
+      "postcode": "47313"
+     },
+     {
+      "name": "Kitagata",
+      "postcode": "47314"
+     },
+     {
+      "name": "Kagera Nkanda",
+      "postcode": "47315"
+     },
+     {
+      "name": "Nyamidaho",
+      "postcode": "47316"
+     },
+     {
+      "name": "Heru Ushingo",
+      "postcode": "47317"
+     },
+     {
+      "name": "Kitanga",
+      "postcode": "47318"
+     },
+     {
+      "name": "Muhunga",
+      "postcode": "47319"
+     },
+     {
+      "name": "Bugaga",
+      "postcode": "47320"
+     },
+     {
+      "name": "Kigembe",
+      "postcode": "47321"
+     },
+     {
+      "name": "Nyumbigwa",
+      "postcode": "47322"
+     },
+     {
+      "name": "Asante Nyerere",
+      "postcode": "47323"
+     },
+     {
+      "name": "Shunguliba",
+      "postcode": "47325"
+     },
+     {
+      "name": "Nyachenda",
+      "postcode": "47326"
+     },
+     {
+      "name": "Muganza",
+      "postcode": "47327"
+     }
+    ]
+   },
+   {
+    "name": "kibondo",
+    "wards": [
+     {
+      "name": "Kibondo Mjini",
+      "postcode": "47401"
+     },
+     {
+      "name": "Murungu",
+      "postcode": "47402"
+     },
+     {
+      "name": "Misezero",
+      "postcode": "47403"
+     },
+     {
+      "name": "Bunyambo",
+      "postcode": "47404"
+     },
+     {
+      "name": "Rugongwe",
+      "postcode": "47405"
+     },
+     {
+      "name": "Busunzu",
+      "postcode": "47406"
+     },
+     {
+      "name": "Busagara",
+      "postcode": "47407"
+     },
+     {
+      "name": "Mabamba",
+      "postcode": "47408"
+     },
+     {
+      "name": "Kizazi",
+      "postcode": "47409"
+     },
+     {
+      "name": "Kumsenga",
+      "postcode": "47410"
+     },
+     {
+      "name": "Itaba",
+      "postcode": "47411"
+     }
+    ]
+   },
+   {
+    "name": "Buhigwe",
+    "wards": [
+     {
+      "name": "Buhigwe",
+      "postcode": "47501"
+     },
+     {
+      "name": "Munzeze",
+      "postcode": "47502"
+     },
+     {
+      "name": "Rusaba",
+      "postcode": "47503"
+     },
+     {
+      "name": "Janda",
+      "postcode": "47504"
+     },
+     {
+      "name": "Munyegera",
+      "postcode": "47505"
+     },
+     {
+      "name": "Muganza",
+      "postcode": "47506"
+     },
+     {
+      "name": "Mwanga B",
+      "postcode": "47507"
+     },
+     {
+      "name": "Muyama",
+      "postcode": "47508"
+     },
+     {
+      "name": "Kajana",
+      "postcode": "47509"
+     },
+     {
+      "name": "Kilelema",
+      "postcode": "47510"
+     },
+     {
+      "name": "Nyamugali",
+      "postcode": "47511"
+     },
+     {
+      "name": "Munanila",
+      "postcode": "47512"
+     },
+     {
+      "name": "Muhinda",
+      "postcode": "47513"
+     },
+     {
+      "name": "Mugera",
+      "postcode": "47514"
+     },
+     {
+      "name": "Biharu",
+      "postcode": "47515"
+     },
+     {
+      "name": "Kibande",
+      "postcode": "47516"
+     },
+     {
+      "name": "Mwayaya",
+      "postcode": "47517"
+     }
+    ]
+   },
+   {
+    "name": "uvinza",
+    "wards": [
+     {
+      "name": "Uvinza",
+      "postcode": "47601"
+     },
+     {
+      "name": "Nguruka",
+      "postcode": "47602"
+     },
+     {
+      "name": "Buhingu",
+      "postcode": "47603"
+     },
+     {
+      "name": "Sigunga",
+      "postcode": "47604"
+     },
+     {
+      "name": "Kalya",
+      "postcode": "47605"
+     },
+     {
+      "name": "Simbo",
+      "postcode": "47606"
+     },
+     {
+      "name": "Kandaga",
+      "postcode": "47607"
+     },
+     {
+      "name": "Sunuka",
+      "postcode": "47608"
+     },
+     {
+      "name": "Ilagala",
+      "postcode": "47609"
+     }
+    ]
+   },
+   {
+    "name": "kakonko",
+    "wards": [
+     {
+      "name": "Kakonko",
+      "postcode": "47701"
+     },
+     {
+      "name": "Kasanda",
+      "postcode": "47702"
+     },
+     {
+      "name": "Mugunzu",
+      "postcode": "47703"
+     },
+     {
+      "name": "Gwanumpu",
+      "postcode": "47704"
+     },
+     {
+      "name": "Kiziguzigu",
+      "postcode": "47705"
+     },
+     {
+      "name": "Kasuga",
+      "postcode": "47706"
+     },
+     {
+      "name": "Rugenge",
+      "postcode": "47707"
+     },
+     {
+      "name": "Muhange",
+      "postcode": "47708"
+     },
+     {
+      "name": "Nyabibuye",
+      "postcode": "47709"
+     }
+    ]
+   }
+  ]
+ }
+]

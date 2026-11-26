@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     # Local apps
     'wastemanager',
     'core',
+    'reference',
+    'complaints',
+    'reports',
 ]
 
 MIDDLEWARE = [
@@ -81,7 +84,14 @@ WSGI_APPLICATION = 'SolidWasteManagementSystem.wsgi.application'
 
 
 # Database
+DB_ENGINE = env('DB_ENGINE', default='postgresql')
+
 DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / env('SQLITE_NAME', default='db.sqlite3'),
+    }
+} if DB_ENGINE == 'sqlite' else {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': env('DB_NAME', default='wastemanagement'),
@@ -121,6 +131,7 @@ AUTH_USER_MODEL = 'core.User'
 # REST Framework
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
+        'core.authentication.FirebaseAuthentication',
         'rest_framework_simplejwt.authentication.JWTAuthentication',
     ),
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
@@ -135,7 +146,12 @@ SIMPLE_JWT = {
 }
 
 # CORS
-CORS_ALLOW_ALL_ORIGINS = True # For development
+CORS_ALLOWED_ORIGINS = env.list(
+    'CORS_ALLOWED_ORIGINS',
+    default=['http://localhost:5173', 'http://127.0.0.1:5173'],
+)
+CORS_ALLOW_ALL_ORIGINS = env.bool('CORS_ALLOW_ALL_ORIGINS', default=DEBUG)
+CORS_EXPOSE_HEADERS = ['Content-Disposition']
 
 # CSRF Trusted Origins (Required for Admin login behind Nginx HTTPS proxy)
 CSRF_TRUSTED_ORIGINS = [
@@ -151,4 +167,7 @@ GRAPHENE = {
 }
 
 # Firebase Configuration
-FIREBASE_CREDENTIALS = env('FIREBASE_CREDENTIALS')
+FIREBASE_CREDENTIALS = env('FIREBASE_CREDENTIALS', default='secret_keys/firebase_service_account_keys.json')
+
+# Roles allowed into the web admin portal.
+ADMIN_PORTAL_ROLES = env.list('ADMIN_PORTAL_ROLES', default=['admin', 'env_officer', 'manager', 'land_officer'])

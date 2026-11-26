@@ -14,7 +14,7 @@ class JWTGraphQLView(GraphQLView):
         if auth_header.startswith('Bearer '):
             token = auth_header.split(' ')[1]
             user = verify_firebase_token(token)
-            if user:
+            if user and user.is_active:
                 request.user = user
             else:
                 request.user = AnonymousUser()

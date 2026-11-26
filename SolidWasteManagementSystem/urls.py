@@ -14,6 +14,8 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 from django.views.decorators.csrf import csrf_exempt
@@ -21,8 +23,13 @@ from core.graphql.auth_decorator import JWTGraphQLView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/reports/', include('reports.urls')),
+    path('api/complaints/', include('complaints.urls')),
     path('api/', include('wastemanager.urls')),
     
     # GraphQL Endpoint with Firebase Auth
     path('graphql/', csrf_exempt(JWTGraphQLView.as_view(graphiql=True))),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
